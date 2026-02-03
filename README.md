@@ -44,7 +44,7 @@ Core principles:
 The diagram below illustrates how AI behavior flows through **contract validation, evaluation, and enforcement** during Stage 1 admission testing.
 
 <p align="center">
-  <img src="docs/LLM diagram.png" alt="LLM Quality Automation Framework Architecture" width="900"/>
+  <img src="docs/LLM-diagram.png" alt="LLM Quality Automation Framework Architecture" width="900"/>
 </p>
 
 **Key idea:**
@@ -119,9 +119,28 @@ Every run produces **verifiable artifacts** — not assumptions, not prompt scre
   <img src="docs/artifact-output-confirmation.png" width="750"/>
 </p>
 
+### Snake Agent Stage-1 Quality Test Execution
+
+<p align="center">
+  <img src="docs/snake-stage1-quality-test-output.png" width="850">
+</p>
+
+The above output shows the framework executing **Stage-1 quality gates** against an external agentic system (Snake AI):
+
+- Critical safety invariants passed
+- Non-critical behavioral tests failed
+- Failures were classified by severity
+- Pipeline enforcement logic was applied without crashing or unsafe execution
+
+The failing non-critical tests are intentional and demonstrate severity-aware enforcement rather than model correctness.
+
+
+This demonstrates deterministic, fail-fast admission control with audit-ready evidence.
+
 These artifacts establish **traceability, auditability, and compliance readiness**.
 
 ---
+
 
 ## 🧠 Pain Points Solved by Stage 1
 
